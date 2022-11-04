@@ -19,7 +19,11 @@ public class MyController {
 
     @RequestMapping("/askDetails")
     public String askEmployeeDetails(Model model) {
-        model.addAttribute("employee", new Employee());
+        Employee emp = new Employee();
+        emp.setName("Aleg");
+        emp.setSurname("Gorinych");
+        emp.setSalary(1200);
+        model.addAttribute("employee", emp);
         return "ask-emp-details-view";
     }
 
