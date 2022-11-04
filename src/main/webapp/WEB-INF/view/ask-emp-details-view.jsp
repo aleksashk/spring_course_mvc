@@ -8,6 +8,7 @@
 
 <form:form action="showDetails" modelAttribute="employee">
     Name<form:input path="name"/>
+    <form:errors path="name"/>
     <br><br>
     Surname <form:input path="surname"/>
     <br><br>
@@ -25,7 +26,7 @@
     <br><br>
 
     Foreign Language(s)
-    <br>
+    <br><br>
     <form:checkboxes path="languages" items="${employee.list}"/>
 
     <input type="submit" value="OK">
