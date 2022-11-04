@@ -4,6 +4,7 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import java.util.HashMap;
 import java.util.Map;
@@ -26,6 +27,9 @@ public class Employee {
     private Map<String, String> carBrands;
     private String[] languages;
     private Map<String, String> list;
+
+    @Pattern(regexp = "\\d{3}-\\d{2}-\\d{2}", message = "please use pattern xxx-xx-xx")
+    private String phoneNumber;
 
     public Employee() {
         departments = new HashMap<>();
@@ -114,6 +118,14 @@ public class Employee {
 
     public void setList(Map<String, String> list) {
         this.list = list;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     @Override

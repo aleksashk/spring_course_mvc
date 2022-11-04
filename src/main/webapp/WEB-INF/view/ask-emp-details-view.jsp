@@ -30,6 +30,11 @@
     Foreign Language(s)
     <br><br>
     <form:checkboxes path="languages" items="${employee.list}"/>
+    <br><br>
+
+    Phone<form:input path="phoneNumber"/>
+    <form:errors path="phoneNumber"/>
+    <br><br>
 
     <input type="submit" value="OK">
 </form:form>
