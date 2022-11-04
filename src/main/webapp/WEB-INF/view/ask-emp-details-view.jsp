@@ -16,7 +16,14 @@
 
     Department <form:select path="department">
     <form:options items="${employee.departments}"/>
-    </form:select>
+</form:select>
+    <br><br>
+
+    Which car do you want?
+    <br><br>
+    BMW<form:radiobutton path="carBrand" value="BMW"/>
+    Audi<form:radiobutton path="carBrand" value="Audi"/>
+    Mercedes-Benz<form:radiobutton path="carBrand" value="Mercedes-Benz"/>
     <br><br>
 
     <input type="submit" value="OK">

@@ -31,7 +31,7 @@ public class MyController {
         String surname = emp.getSurname();
         emp.setSurname(surname + "!");
         int salary = emp.getSalary();
-        emp.setSalary(salary*100);
+        emp.setSalary(salary);
         return "show-emp-details-view";
     }
 }
