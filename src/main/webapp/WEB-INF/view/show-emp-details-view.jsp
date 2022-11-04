@@ -5,6 +5,8 @@
 <br>
 <br>
 <br>
-your name: ${param.employeeName}
+<%--your name: ${param.employeeName}--%>
+
+Your name: ${nameAttribute}
 </body>
 </html>
