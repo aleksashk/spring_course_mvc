@@ -1,8 +1,9 @@
 package com.alibaba.spring.mvc;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.HashMap;
 import java.util.Map;
@@ -15,6 +16,9 @@ public class Employee {
     @NotEmpty(message = "surname is required field")
     @NotBlank(message = "surname is required field")
     private String surname;
+
+    @Min(value = 499, message = "must be greater then 499")
+    @Max(value = 1000, message = "must be less then 1001")
     private int salary;
     private String department;
     private Map<String, String> departments;
