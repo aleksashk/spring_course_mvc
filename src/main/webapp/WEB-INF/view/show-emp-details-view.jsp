@@ -28,6 +28,7 @@ Language(s):
 </ul>
 
 Phone number: ${employee.phoneNumber}
+email: ${employee.email}
 
 </body>
 </html>
